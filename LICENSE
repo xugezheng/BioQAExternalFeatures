@@ -1,4 +1,11 @@
-                    GNU GENERAL PUBLIC LICENSE
+### BioASQ
+Before using the files in this repository, you must first register BioASQ website and download the [BioASQ Task B](http://participants-area.bioasq.org/Tasks/A/getData/) data.
+See "An overview of the BIOASQ large-scale biomedical semantic indexing and question answering competition (Tsatsaronis et al. 2015)" for datasets details.
+
+### PubMed
+Downloading data indicates your acceptance of the <a href="https://www.nlm.nih.gov/databases/download/terms_and_conditions.html">Terms and Conditions</a> from National Library of Medicine Terms and Conditions.
+
+                      GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
