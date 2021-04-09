@@ -2,7 +2,7 @@
 
 This repository is the official implementation of paper "External Features Enriched Model for Biomedical Question Answering". 
 
-The code is based on original [BERT Repository released by Google](https://github.com/google-research/bert)
+The code is based on the [original BERT Repository](https://github.com/google-research/bert) released by Google Team.
 
 ## Preparations
 
@@ -23,17 +23,116 @@ For the data utilized in our experiments:
 
 * The data mainly come from `SQuAD` and `BioASQ Challenge`;
 
-* You can get the feature-enriched training data under two ways
+* You can get the feature-enriched training data under two ways:
 
    * Directly download the processed data from our [google drive link](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing)
    
-   * Use the provided scripts to process the NER, POS and BioNER feature on your own side.  
+   * Use the provided scripts to extract the NER, POS and BioNER features on your own side.  
 
 ### Requirements
 
+To install requirements:
+
+```
+pip install -r requirements.txt
+```
+
 ### Model Training
 
+If you want to train the model from scratch (which means from original BERT), please download the [BERT param](https://github.com/google-research/bert) 
+to a `model` folder, 
+and [the feature-enrich squad training data (`data/squad`)](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing)
+ to a `data` folder, indicate the variables `MODEL_DIR` and `DATA_DIR`,
+
+```
+export MODEL_DIR=/path/to/model
+export DATA_DIR=/path/to/data
+
+```
+and run the training file:
+```
+python run_factoid_pos_ner.py \
+     --do_train=True\
+     --do_predict=True \
+     --vocab_file=$MODEL_DIR/vocab.txt \
+     --bert_config_file=$MODEL_DIR/bert_config.json \
+     --init_checkpoint=$MODEL_DIR/model.ckpt-1000000 \
+     --max_seq_length=384 \
+     --train_batch_size=8 \
+     --learning_rate=5e-6 \
+     --doc_stride=128 \
+     --num_train_epochs=4.0 \
+     --do_lower_case=False \
+     --train_file=$DATA_DIR/ner_pos_train-v1.1.json \
+     --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
+     --output_dir=$OUTPUT_DIR
+
+```
+
+If you want to train the model from SQuAD-trained step, please download the [squad param under `model/squad`](https://drive.google.com/drive/folders/1mQ68-CIsz3izoj_yuzVE86o8URN2o4SD?usp=sharing)
+ to a `model` folder, 
+and [the target BioASQ training data (e.g., `data/6b`)](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing)
+ to a `data` folder, similarly indicate the variables `MODEL_DIR` and `DATA_DIR`,
+
+```
+export MODEL_DIR=/path/to/model
+export DATA_DIR=/path/to/data
+
+```
+and run the training file:
+```
+python run_factoid_pos_ner.py \
+     --do_train=True\
+     --do_predict=True \
+     --vocab_file=$MODEL_DIR/vocab.txt \
+     --bert_config_file=$MODEL_DIR/bert_config.json \
+     --init_checkpoint=$MODEL_DIR/model.ckpt-1000000 \
+     --max_seq_length=384 \
+     --train_batch_size=8 \
+     --learning_rate=5e-6 \
+     --doc_stride=128 \
+     --num_train_epochs=4.0 \
+     --do_lower_case=False \
+     --train_file=$DATA_DIR/ner_pos_6b.json \
+     --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
+     --output_dir=$OUTPUT_DIR
+
+```
+
+### Model Prediction
+If you only want to predict the result on a specific BioASQ challenge test set, please download the [the target model param under for example `model/6b`](https://drive.google.com/drive/folders/1mQ68-CIsz3izoj_yuzVE86o8URN2o4SD?usp=sharing)
+ to a `model` folder, 
+and [the target BioASQ test data (e.g., `data/6b`)](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing)
+ to a `data` folder, similarly indicate the variables `MODEL_DIR` and `DATA_DIR`,
+
+```
+export MODEL_DIR=/path/to/model
+export DATA_DIR=/path/to/data
+
+```
+and run the training file:
+```
+python run_factoid_pos_ner.py \
+     --do_train=False\
+     --do_predict=True \
+     --vocab_file=$MODEL_DIR/vocab.txt \
+     --bert_config_file=$MODEL_DIR/bert_config.json \
+     --init_checkpoint=$MODEL_DIR/model.ckpt-1000000 \
+     --max_seq_length=384 \
+     --train_batch_size=8 \
+     --learning_rate=5e-6 \
+     --doc_stride=128 \
+     --num_train_epochs=4.0 \
+     --do_lower_case=False \
+     --train_file=$DATA_DIR/ner_pos_6b.json \
+     --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
+     --output_dir=$OUTPUT_DIR
+
+```
+
 ### Evaluation 
+
+To evaluate BioASQ answers, your system should be able to execute java codes, and please refer https://github.com/BioASQ/Evaluation-Measures, the BioASQ official evaluation tool, for details.
 
 ## Results
 
