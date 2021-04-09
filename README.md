@@ -27,7 +27,7 @@ For the data utilized in our experiments:
 
    * Directly download the processed data from our [google drive link](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing)
    
-   * Use the provided scripts to extract the NER, POS and BioNER features on your own side.  
+   * Use the provided tools in `dataProcess` to extract the NER, POS and BioNER features on your own side.  
 
 ### Requirements
 
