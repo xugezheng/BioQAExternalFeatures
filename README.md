@@ -143,5 +143,17 @@ To conduct the complete evalution process, it is required the golden answers rel
  downloaded after registering on http://www.bioasq.org/. 
 
 ## Results
+### 6b
+| Metrics  | SAcc  | LAcc  | MRR  |
+| ------------- |-------------:| -----:|-----:|
+| Our Model   | 0.4517 | 0.6294 | 0.5197 |
 
+### 7b
+| Metrics  | SAcc  | LAcc  | MRR  |
+| ------------- |-------------:| -----:|-----:|
+| Our Model   | 0.4444 | 0.6419| 0.5165 |
 
+### 8b
+| Metrics  | SAcc  | LAcc  | MRR  |
+| ------------- |-------------:| -----:|-----:|
+| Our Model   | 0.3937 | 0.6098| 0.4688 |
