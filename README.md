@@ -47,7 +47,6 @@ and [the feature-enrich squad training data (`data/squad`)](https://drive.google
 ```
 export MODEL_DIR=/path/to/model
 export DATA_DIR=/path/to/data
-
 ```
 and run the training file:
 ```
@@ -66,7 +65,6 @@ python run_factoid_pos_ner.py \
      --train_file=$DATA_DIR/ner_pos_train-v1.1.json \
      --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
      --output_dir=$OUTPUT_DIR
-
 ```
 
 If you want to train the model from SQuAD-trained step, please download the [squad param under `model/squad`](https://drive.google.com/drive/folders/1mQ68-CIsz3izoj_yuzVE86o8URN2o4SD?usp=sharing)
@@ -77,7 +75,6 @@ and [the target BioASQ training data (e.g., `data/6b`)](https://drive.google.com
 ```
 export MODEL_DIR=/path/to/model
 export DATA_DIR=/path/to/data
-
 ```
 and run the training file:
 ```
@@ -96,7 +93,6 @@ python run_factoid_pos_ner.py \
      --train_file=$DATA_DIR/ner_pos_6b.json \
      --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
      --output_dir=$OUTPUT_DIR
-
 ```
 
 ### Model Prediction
@@ -108,7 +104,6 @@ and [the target BioASQ test data (e.g., `data/6b`)](https://drive.google.com/dri
 ```
 export MODEL_DIR=/path/to/model
 export DATA_DIR=/path/to/data
-
 ```
 and run the training file:
 ```
@@ -127,7 +122,6 @@ python run_factoid_pos_ner.py \
      --train_file=$DATA_DIR/ner_pos_6b.json \
      --predict_file=$DATA_DIR/ner_pos_BioASQ-test-factoid-6b-1.json \
      --output_dir=$OUTPUT_DIR
-
 ```
 
 ### Evaluation 
