@@ -2,7 +2,7 @@
 
 This repository is the official implementation of paper "External Features Enriched Model for Biomedical Question Answering". 
 
-The code is based on the [original BERT Repository](https://github.com/google-research/bert) released by Google Team.
+The code is based on the [original BERT Repository](https://github.com/google-research/bert) released by Google Team and the [BioBERT Model](https://github.com/dmis-lab/biobert) released by [DMIS-LAB](https://github.com/dmis-lab).
 
 ## Preparations
 
@@ -21,7 +21,8 @@ downloaded from `model/6b`, `model/7b`, `model/8b`.
 
 For the data utilized in our experiments:
 
-* The data mainly come from `SQuAD` and `BioASQ Challenge`;
+* The data mainly come from `SQuAD` and `BioASQ Challenge`. Particularly, for the biomedical QA data, we have utilized the
+ enriched data provided by [DMIS-LAB](https://github.com/dmis-lab);
 
 * You can get the feature-enriched training data under two ways:
 
@@ -134,7 +135,9 @@ python run_factoid_pos_ner.py \
 
 ### Evaluation 
 
-To evaluate BioASQ answers, your system should be able to execute java codes, and please refer https://github.com/BioASQ/Evaluation-Measures, the BioASQ official evaluation tool, for details.
+To evaluate BioASQ answers, the system should be able to execute java codes, and please refer https://github.com/BioASQ/Evaluation-Measures, the BioASQ official evaluation tool, for details.
+
+Besides, we have utilized the transformation script released by [DMIS-LAB](https://github.com/dmis-lab/bioasq-biobert/tree/v1.0/biocodes)
 
 ## Results
 
