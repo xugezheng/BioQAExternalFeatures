@@ -37,6 +37,11 @@ To install requirements:
 pip install -r requirements.txt
 ```
 
+## Utilization
+
+Following are the using guides for training, predicting and evaluating our framework. For more information,
+ please refer to the script files in the `scripts` folder.
+
 ### Model Training
 
 If you want to train the model from scratch (which means from original BERT), please download the [BERT param](https://github.com/google-research/bert) 
@@ -45,8 +50,8 @@ and [the feature-enrich squad training data (`data/squad`)](https://drive.google
  to a `data` folder, indicate the variables `MODEL_DIR` and `DATA_DIR`,
 
 ```
-export MODEL_DIR=/path/to/model
-export DATA_DIR=/path/to/data
+export MODEL_DIR=/full/path/to/model
+export DATA_DIR=/full/path/to/data
 ```
 and run the training file:
 ```
@@ -73,8 +78,8 @@ and [the target BioASQ training data (e.g., `data/6b`)](https://drive.google.com
  to a `data` folder, similarly indicate the variables `MODEL_DIR` and `DATA_DIR`,
 
 ```
-export MODEL_DIR=/path/to/model
-export DATA_DIR=/path/to/data
+export MODEL_DIR=/full/path/to/model
+export DATA_DIR=/full/path/to/data
 ```
 and run the training file:
 ```
@@ -102,8 +107,8 @@ and [the target BioASQ test data (e.g., `data/6b`)](https://drive.google.com/dri
  to a `data` folder, similarly indicate the variables `MODEL_DIR` and `DATA_DIR`,
 
 ```
-export MODEL_DIR=/path/to/model
-export DATA_DIR=/path/to/data
+export MODEL_DIR=/full/path/to/model
+export DATA_DIR=/full/path/to/data
 ```
 and run the training file:
 ```
