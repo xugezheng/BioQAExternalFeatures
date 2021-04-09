@@ -52,6 +52,7 @@ and [the feature-enrich squad training data (`data/squad`)](https://drive.google
 ```
 export MODEL_DIR=/full/path/to/model
 export DATA_DIR=/full/path/to/data
+export OUTPUT_DIR=/please/set/an/output/dir
 ```
 and run the training file:
 ```
@@ -80,6 +81,7 @@ and [the target BioASQ training data (e.g., `data/6b`)](https://drive.google.com
 ```
 export MODEL_DIR=/full/path/to/model
 export DATA_DIR=/full/path/to/data
+export OUTPUT_DIR=/please/set/an/output/dir
 ```
 and run the training file:
 ```
@@ -109,6 +111,7 @@ and [the target BioASQ test data (e.g., `data/6b`)](https://drive.google.com/dri
 ```
 export MODEL_DIR=/full/path/to/model
 export DATA_DIR=/full/path/to/data
+export OUTPUT_DIR=/please/set/an/output/dir
 ```
 and run the training file:
 ```
