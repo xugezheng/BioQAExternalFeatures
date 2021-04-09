@@ -139,6 +139,9 @@ To evaluate BioASQ answers, the system should be able to execute java codes, and
 
 Besides, we have utilized the transformation script released by [DMIS-LAB](https://github.com/dmis-lab/bioasq-biobert/tree/v1.0/biocodes)
 
+To conduct the complete evalution process, it is required the golden answers released by BioASQ Challenge, which could be
+ downloaded after registering on http://www.bioasq.org/. 
+
 ## Results
 
 
