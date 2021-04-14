@@ -27,8 +27,8 @@ BioQAExternalFeatures
 ├─ optimization.py
 ├─ optimization_test.py
 ├─ requirements.txt
-├─ run_factoid_baseline.py
-├─ run_factoid_pos_ner.py
+├─ run_factoid_baseline.py # Original BioBERT model 
+├─ run_factoid_pos_ner.py # Our model (Feature Fusion + NER feature + POS feature)
 ├─ tokenization.py
 └─ tokenization_test.py
 ```
