@@ -4,6 +4,35 @@ This repository is the official implementation of paper "External Features Enric
 
 The code is based on the [original BERT Repository](https://github.com/google-research/bert) released by Google Team and the [BioBERT Model](https://github.com/dmis-lab/biobert) released by [DMIS-LAB](https://github.com/dmis-lab).
 
+The repo structure is:
+```
+BioQAExternalFeatures
+├─ dataProcess
+│    ├─ bioner.py
+│    ├─ posTreat.py
+│    ├─ pos_ner_treat.py
+│    └─ readme.md
+├─ scripts
+│    ├─ evaluation.sh
+│    ├─ prediction.sh
+│    ├─ readme.md
+│    └─ training.sh
+├─ LICENSE
+├─ README.md
+├─ __init__.py
+├─ create_pretraining_data.py
+├─ extract_features.py
+├─ modeling.py
+├─ modeling_test.py
+├─ optimization.py
+├─ optimization_test.py
+├─ requirements.txt
+├─ run_factoid_baseline.py
+├─ run_factoid_pos_ner.py
+├─ tokenization.py
+└─ tokenization_test.py
+```
+
 ## Preparations
 
 ### Data and Model Params
