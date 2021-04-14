@@ -4,7 +4,7 @@ This repository is the official implementation of paper "External Features Enric
 
 The code is based on the [original BERT Repository](https://github.com/google-research/bert) released by Google Team and the [BioBERT Model](https://github.com/dmis-lab/biobert) released by [DMIS-LAB](https://github.com/dmis-lab).
 
-The repo structure is:
+The repo's structure is:
 ```
 BioQAExternalFeatures
 ├─ dataProcess
