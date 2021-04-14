@@ -40,6 +40,8 @@ BioQAExternalFeatures
 [Trained Models's parameters](https://drive.google.com/drive/folders/1mQ68-CIsz3izoj_yuzVE86o8URN2o4SD?usp=sharing)
  and [processed data (added POS and NER labels)](https://drive.google.com/drive/folders/1rFeVTIjSiTXV_M4_4iGhvQXqbYtt3nTn?usp=sharing) can be directly downloaded from Google Drive.
 
+For Chinese users, if the speed of Google Drive is limited, please contact us for the data and models on Baidu Pan.
+
 For the trained models:
 
 * We firstly fine-tuned [BERT (BERT-Base, Multilingual Cased)](https://github.com/google-research/bert) under our enriched external-feature framework on [SQuAD v1.1](https://rajpurkar.github.io/SQuAD-explorer/explore/1.1/dev/), 
